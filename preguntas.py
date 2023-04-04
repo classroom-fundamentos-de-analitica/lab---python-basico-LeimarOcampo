@@ -11,7 +11,12 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 """
+with open("./data.csv", "r") as file:
+    datos = file.readlines()
 
+datoscsv = [line.replace("\n", "") for line in datos]
+
+datosPreparados = [line.split("\t") for line in datoscsv]
 
 def pregunta_01():
     
